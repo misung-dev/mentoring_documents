@@ -1,29 +1,27 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import { BackofficeLoginModal } from './components/BackofficeLogin/BackofficeLoginModal';
 import './App.css';
 
 function App() {
-  const [count, setState] = useState(0);
-
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="container">
+        <h1>멘토링 리팩토링 프로젝트</h1>
+        <p>백오피스 로그인 모달 컴포넌트 리팩토링 연습</p>
+
+        <div className="test-info">
+          <h3>테스트 계정</h3>
+          <p>
+            이메일: <code>admin@test.com</code>
+          </p>
+          <p>
+            비밀번호: <code>password123</code>
+          </p>
+        </div>
+
+        <BackofficeLoginModal>
+          <button className="login-trigger-btn">백오피스 로그인</button>
+        </BackofficeLoginModal>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setState((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
     </div>
   );
 }
