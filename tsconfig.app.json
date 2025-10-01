@@ -28,5 +28,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src", "documents/SimpleTodoGood.tsx", "documents/TodoList.tsx"]
 }
